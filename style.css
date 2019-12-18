@@ -8,6 +8,8 @@ html {
 }
 
 .container {
+  display: flex;
+  flex-direction: column;
   height: 100vh;
   width: 100%;
   background: linear-gradient(
@@ -26,9 +28,10 @@ html {
 
 .menu-list {
   display: flex;
-  font-size: 3.5rem;
+  font-size: 2.5rem;
   list-style: none;
   justify-content: space-evenly;
+  flex-wrap: wrap;
 }
 
 .menu-item {
@@ -47,9 +50,8 @@ h2 {
 }
 
 .greeting {
-  display: inline-block;
   letter-spacing: 0.2rem;
-  margin: 150px 0 0 100px;
+  margin: 15rem 0 0 10rem;
 }
 
 .greeting-bold {
@@ -57,64 +59,82 @@ h2 {
   border-bottom: 0.2rem solid #fff;
 }
 
+@media (max-width: 750px) {
+  .const {
+    font-size: 3rem;
+  }
+  .greeting-bold {
+    font-size: 4rem;
+  }
+}
+
+@media (max-width: 650px) {
+  .const {
+    font-size: 2rem;
+  }
+  .greeting-bold {
+    font-size: 3rem;
+  }
+}
+
 /* top end */
 
 /* about */
 
-.about {
+.section-about {
   width: 100%;
   height: auto;
   display: flex;
   flex-direction: row;
-  flex-wrap: wrap;
-  margin: 5rem 0 5rem 0;
 }
 
-.about-section {
-  font-size: 4rem;
+.about-title {
   text-align: center;
-  margin: 7rem 0 3rem 0;
+  font-size: 4rem;
+  margin: 4rem 0;
 }
-.introduction {
+
+.about-container {
   display: flex;
   flex-direction: row;
-  width: 50%;
-  height: 50rem;
+  flex-wrap: wrap;
 }
 
-.intro-myself {
-  margin: 3rem;
-}
-
-h3.name {
-  font-size: 4rem;
+.image {
+  width: 100%;
+  height: auto;
   text-align: center;
-  margin-bottom: 3rem;
-}
-
-h4.occupation {
-  font-size: 3rem;
   margin-bottom: 2rem;
 }
 
-p.about-me {
-  font-size: 2.2rem;
-  text-align: justify;
-  margin: 0 4rem 4rem 3rem;
+.selfie {
+  width: 25rem;
+  height: 25rem;
+  margin: 0 auto;
+  border-radius: 50%;
 }
 
-.myimage {
-  width: 50%;
-  height: 50rem;
+.introduction {
+}
+
+.myname {
+  font-size: 5rem;
   text-align: center;
 }
 
-.myimage img {
-  border-radius: 50%;
-  border: 4px solid rgb(130, 129, 133);
-  margin-top: 5rem;
+.occupation {
+  font-size: 3rem;
+  text-align: center;
+  margin-top: 1rem;
+  padding-bottom: 0, 5rem;
 }
 
+.about-me {
+  font-size: 2rem;
+  margin: 2.5rem 10rem 6rem 10rem;
+  text-align: justify;
+  letter-spacing: 1px;
+}
 /* work */
 
 .work-section {
@@ -156,6 +176,7 @@ p.about-me {
   width: 30rem;
   height: 35rem;
   background-color: goldenrod;
+  margin-bottom: 2rem;
 }
 
 /* skills */
@@ -298,6 +319,14 @@ i {
 i {
   font-size: 7rem;
   /* color: #fff; */
+}
+
+a:visited {
+  color: #fff;
+}
+
+a:link {
+  color: #fff;
 }
 
 .sns-name {
